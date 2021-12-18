@@ -13,12 +13,11 @@ class _TextfieldState extends State<Textfield> {
   @override
   void initState() {
     super.initState();
-       print('init------------------------------- ' );
+    print('init-----初始化');
   }
 
   @override
   Widget build(BuildContext context) {
-      print('+++++++++++++++++$_unameController.text' );
     return Column(
       children: <Widget>[
         TextField(
@@ -26,7 +25,7 @@ class _TextfieldState extends State<Textfield> {
           controller: _unameController, //设置controller
           onChanged: (v) {
             // ignore: avoid_print
-            print("onChange: $v");
+            print("onChange:+++++++++++++++ $v");
           },
           decoration: const InputDecoration(
               labelText: "用户名",

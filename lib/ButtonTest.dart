@@ -11,8 +11,8 @@ class _ButtontestState extends State<ButtonTest> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:  <Widget>[
-        ElevatedButton(onPressed: () {}, child:  const Text("elevated Button")),
+      children: <Widget>[
+        ElevatedButton(onPressed: () {}, child: const Text("elevated Button")),
         ElevatedButton.icon(
           onPressed: () {},
           label: const Text("发布内容"),

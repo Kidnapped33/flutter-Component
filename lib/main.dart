@@ -8,6 +8,8 @@ import 'package:flutter_test1/SwitchTest.dart';
 import 'package:flutter_test1/TextField.dart';
 import 'package:flutter_test1/TextTest.dart';
 
+import 'FormTest.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -60,7 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
               // const Icontest(),
               // const Switchtest(),
               // const Checkboxtest(),
-              const Textfield(),
+              // const Textfield(),
+              const FormTestRoute(),
 
               Text(
                 '$_counter',

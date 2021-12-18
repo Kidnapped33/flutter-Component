@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FormTestRoute extends StatefulWidget {
-  const FormTestRoute({Key? key}) : super(key: key);
+class namePasswordTest2 extends StatefulWidget {
+  const namePasswordTest2({Key? key}) : super(key: key);
 
   @override
-  _FormTestRouteState createState() => _FormTestRouteState();
+  _namePasswordTest2State createState() => _namePasswordTest2State();
 }
 
-class _FormTestRouteState extends State<FormTestRoute> {
+class _namePasswordTest2State extends State<namePasswordTest2> {
   final GlobalKey _formKey = GlobalKey<FormState>();
 
   @override
@@ -16,17 +16,19 @@ class _FormTestRouteState extends State<FormTestRoute> {
       key: _formKey, //设置globalKey，用于后面获取FormState
       autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
-        children: const <Widget>[
+        children: <Widget>[
           TextField(
             autofocus: true,
-            //绑定用户名的值
-            decoration: InputDecoration(
+            //监听:每次输入都触发
+            onChanged: (v) {
+              print('change:$v');
+            },
+            decoration: const InputDecoration(
                 labelText: "用户名",
                 hintText: "请输入用户名或邮箱",
                 prefixIcon: Icon(Icons.person)),
           ),
-          TextField(
-            //绑定密码的值
+          const TextField(
             decoration: InputDecoration(
                 labelText: "密码",
                 hintText: "请输入您的登录密码",

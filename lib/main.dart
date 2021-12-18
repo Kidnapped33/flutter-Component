@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test1/02_layout/ColumnTest.dart';
+import 'package:flutter_test1/02_layout/layout.dart';
+import 'package:flutter_test1/BasicCompents/FocusTestRoute.dart';
 import 'package:flutter_test1/BasicTest.dart';
 import 'package:flutter_test1/CheckBoxTest.dart';
+import 'package:flutter_test1/FocusTestRoute.dart';
 import 'package:flutter_test1/IconTest.dart';
 import 'package:flutter_test1/ImagesTest.dart';
 import 'package:flutter_test1/ButtonTest.dart';
+import 'package:flutter_test1/NamePasswordTest.dart';
+import 'package:flutter_test1/NamePasswordTest2.dart';
 import 'package:flutter_test1/SwitchTest.dart';
 import 'package:flutter_test1/TextField.dart';
 import 'package:flutter_test1/TextTest.dart';
-
-import 'FormTest.dart';
+import 'package:flutter_test1/Widget/TransformTest.dart';
+import 'package:flutter_test1/Widget/constraints.dart';
+import 'package:flutter_test1/Widget/rowColumn.dart';
 
 void main() => runApp(const MyApp());
 
@@ -50,29 +57,35 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              // const BasicTest(),
-              // const ImagesTest(),
-              // const ButtonTest(),
-              // const Texttest(),
-              // const Icontest(),
-              // const Switchtest(),
-              // const Checkboxtest(),
-              // const Textfield(),
-              const FormTestRoute(),
+      body:
+          // const BasicTest(),
+          // const ImagesTest(),
+          // const ButtonTest(),
+          // const Texttest(),
+          // const Icontest(),
+          // const Switchtest(),
+          // const Checkboxtest(),
+          // const Textfield(),
+          // const namePasswordTest(),
+          // const namePasswordTest2(),
+          // const Focustestroute(),
+          // const Constraints(),
+          // const Rowcolumn(),
+          // const Transformtest(),
+          // const Layout(),
+          const Columntest(),
 
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-            ],
-          ),
-        ),
-      ),
+      // Text(
+      //   '$_counter',
+      //   style: Theme.of(context).textTheme.headline4,
+      // ),
+
+      // body: Center(
+      //   child: Column(
+      //     // mainAxisAlignment: MainAxisAlignment.center,
+
+      //   ),
+      // ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',

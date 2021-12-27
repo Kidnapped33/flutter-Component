@@ -1,35 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/02_layout/ColumnTest.dart';
-import 'package:flutter_test1/02_layout/layout.dart';
-import 'package:flutter_test1/BasicCompents/FocusTestRoute.dart';
-import 'package:flutter_test1/BasicTest.dart';
-import 'package:flutter_test1/CheckBoxTest.dart';
-import 'package:flutter_test1/FocusTestRoute.dart';
-import 'package:flutter_test1/IconTest.dart';
-import 'package:flutter_test1/ImagesTest.dart';
-import 'package:flutter_test1/ButtonTest.dart';
-import 'package:flutter_test1/NamePasswordTest.dart';
-import 'package:flutter_test1/NamePasswordTest2.dart';
-import 'package:flutter_test1/SwitchTest.dart';
-import 'package:flutter_test1/TextField.dart';
-import 'package:flutter_test1/TextTest.dart';
-import 'package:flutter_test1/Widget/TransformTest.dart';
-import 'package:flutter_test1/Widget/constraints.dart';
-import 'package:flutter_test1/Widget/rowColumn.dart';
 
-void main() => runApp(const MyApp());
+import '01_mainDemo/CardDemo.dart';
+import '01_mainDemo/StackDemo.dart';
+import '01_mainDemo/WrapDemo.dart';
+import '01_mainDemo/flexDemo.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+void main() => runApp(const MyApp2());
+
+class MyApp2 extends StatelessWidget {
+  const MyApp2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter - App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter'),
+      home: const MyHomePage(title: '招聘端'),
     );
   }
 }
@@ -43,54 +31,32 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body:
-          // const BasicTest(),
-          // const ImagesTest(),
-          // const ButtonTest(),
-          // const Texttest(),
-          // const Icontest(),
-          // const Switchtest(),
-          // const Checkboxtest(),
-          // const Textfield(),
-          // const namePasswordTest(),
-          // const namePasswordTest2(),
-          // const Focustestroute(),
-          // const Constraints(),
-          // const Rowcolumn(),
-          // const Transformtest(),
-          // const Layout(),
-          const Columntest(),
-
-      // Text(
-      //   '$_counter',
-      //   style: Theme.of(context).textTheme.headline4,
-      // ),
-
-      // body: Center(
-      //   child: Column(
-      //     // mainAxisAlignment: MainAxisAlignment.center,
-
-      //   ),
-      // ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+          actions: const [Icon(Icons.share)],
+        ),
+        body:
+            // const Flexdemo()
+            //Wrapdemo()
+            // const Stackdemo()
+            const Carddemo());
   }
 }
+
+// class Demo extends StatelessWidget {
+//   const Demo({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: const <Widget>[
+//         Icon(Icons.share_arrival_time),
+//         Icon(Icons.shopping_cart),
+//         Icon(Icons.short_text),
+//       ],
+//     );
+//   }
+// }

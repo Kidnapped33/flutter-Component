@@ -47,7 +47,7 @@ class Carddemo extends StatelessWidget {
             title: Text("Ashine"),
             subtitle: Text("13056987955"),
           ),
-          Divider(),
+          Divider(thickness: 0.8),
           ListTile(
             title: Text("住址：嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻"),
           ),

@@ -6,27 +6,29 @@ class Stackdemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: const BoxConstraints.expand(),
-      child: Stack(
-        alignment: Alignment.center,
-        fit: StackFit.expand, //未定位widget占满Stack整个空间
-        children: <Widget>[
-          // const Positioned(
-          //   left: 18.0,
-          //   child: Text("I am Jack"),
-          // ),
-          Container(
-            child: const Text("Hello world",
-                style: TextStyle(color: Colors.white)),
-            color: Colors.red,
+        constraints: const BoxConstraints.expand(),
+        child: Scaffold(
+          appBar: AppBar(title: const Text("Stack 层叠布局页")),
+          body: Stack(
+            alignment: Alignment.center,
+            fit: StackFit.expand, //未定位widget占满Stack整个空间
+            children: <Widget>[
+              // const Positioned(
+              //   left: 18.0,
+              //   child: Text("I am Jack"),
+              // ),
+              Container(
+                child: const Text("Hello world",
+                    style: TextStyle(color: Colors.white)),
+                color: Colors.red,
+              ),
+              const Positioned(
+                top: 18.0,
+                child: Text("Your friend"),
+              )
+            ],
           ),
-          const Positioned(
-            top: 18.0,
-            child: Text("Your friend"),
-          )
-        ],
-      ),
-    );
+        ));
   }
 }
 

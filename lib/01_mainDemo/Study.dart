@@ -5,14 +5,16 @@ class Study extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: const <Widget>[
-      Text("44444444444444"),
-      Text(
-        "8888888888888888888888888888888888888888888888888888888888",
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-      ),
-      Text("0000000000000000", textScaleFactor: 1.5),
-    ]);
+    return Scaffold(
+        appBar: AppBar(title: Text("当面是跳转的页面")),
+        body: Column(children: const <Widget>[
+          Text("44444444444444"),
+          Text(
+            "8888888888888888888888888888888888888888888888888888888888",
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+          Text("0000000000000000", textScaleFactor: 1.5),
+        ]));
   }
 }

@@ -32,38 +32,40 @@ class Wrapdemo extends StatelessWidget {
 
   // ------------------------------------------ 使用 Row 会溢出 -----------------------
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      // crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Wrap(
-          //主轴方向子widget的间距
-          spacing: 10,
-          //纵轴方向的间距
-          runSpacing: 20,
-          //纵轴方向的对齐方式
-          alignment: WrapAlignment.center,
-          //获取数据
-          children: _getList(),
-        ),
-        Wrap(
-          children: const <Widget>[
-            Chip(
-                avatar: CircleAvatar(
-                    backgroundColor: Colors.blue, child: Text('M')),
-                label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
-            Chip(label: Text("data")),
+    return Scaffold(
+        appBar: AppBar(title: const Text(" Wrap 流式布局")),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Wrap(
+              //主轴方向子widget的间距
+              spacing: 10,
+              //纵轴方向的间距
+              runSpacing: 20,
+              //纵轴方向的对齐方式
+              alignment: WrapAlignment.center,
+              //获取数据
+              children: _getList(),
+            ),
+            Wrap(
+              children: const <Widget>[
+                Chip(
+                    avatar: CircleAvatar(
+                        backgroundColor: Colors.blue, child: Text('M')),
+                    label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+                Chip(label: Text("data")),
+              ],
+            )
           ],
-        )
-      ],
-    );
+        ));
   }
 }

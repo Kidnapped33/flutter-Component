@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import '01_mainDemo/Study.dart';
 
+import '01_mainDemo/Listviewdemo.dart';
+import '01_mainDemo/SingleChildScrollViewDemo.dart';
+import '01_mainDemo/ButtonThemeDemo.dart';
 import '01_mainDemo/ButtonDemo.dart';
 import '01_mainDemo/CardDemo.dart';
 import '01_mainDemo/StackDemo.dart';
@@ -41,10 +45,15 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body:
             // const Flexdemo()
-            //Wrapdemo()
+            // Wrapdemo()
             // const Stackdemo()
             // const Carddemo()
-            const Buttondemo());
+            // const Buttondemo()
+            // const Buttonthemedemo()
+            // const SingleChildScrollViewDemo()
+            const Study()
+        // const Listviewdemo()
+        );
   }
 }
 

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import '01_mainDemo/Study.dart';
 import '01_mainDemo/NewRouter.dart';
-import '01_mainDemo/ButtonThemeDemo.dart';
 import '01_mainDemo/SingleChildScrollViewDemo.dart';
-import '01_mainDemo/Listviewdemo.dart';
 import '01_mainDemo/ButtonDemo.dart';
 import '01_mainDemo/CardDemo.dart';
 import '01_mainDemo/StackDemo.dart';
 import '01_mainDemo/WrapDemo.dart';
 import '01_mainDemo/flexDemo.dart';
-import '02_layout/ColumnTest.dart';
-import '02_layout/RowTest.dart';
+import '01_mainDemo/ColumnTest.dart';
+import '01_mainDemo/RowTest.dart';
+import '01_mainDemo/TableDemo.dart';
+import '01_mainDemo/Listviewdemo.dart';
+import '01_mainDemo/GridViewDemo.dart';
+import '01_mainDemo/Cuperitino.dart';
 
 void main() => runApp(const MyApp2());
 
@@ -45,17 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions: const [Icon(Icons.share)],
       ),
-      body: Demo(),
-      // const Flexdemo()
-      // Wrapdemo()
-      // const Stackdemo()
-      // const Carddemo()
-      // const Buttondemo()
-      // const Buttonthemedemo()
-      // const SingleChildScrollViewDemo()
-      // const Study(),
-      // const NewRoute(),
-      // const Listviewdemo()
+      body: const Demo(),
     );
   }
 }
@@ -150,6 +141,39 @@ class Demo extends StatelessWidget {
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return const RowTest();
+              }));
+            },
+          ),
+
+          ElevatedButton(
+            child: const Text("Table 组件"),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const TableDemo();
+              }));
+            },
+          ),
+          ElevatedButton(
+            child: const Text("ListView 组件"),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const Listviewdemo();
+              }));
+            },
+          ),
+          ElevatedButton(
+            child: const Text("GridView 组件"),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const GridViewDemo();
+              }));
+            },
+          ),
+          ElevatedButton(
+            child: const Text("Cuperitino 风格"),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Cuperitino();
               }));
             },
           ),

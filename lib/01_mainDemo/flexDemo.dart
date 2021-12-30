@@ -11,7 +11,7 @@ class _FlexdemoState extends State<Flexdemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Flex布局页")),
+        appBar: AppBar(title: const Text("Flex 布局页")),
         body: Column(children: [
           Row(
             children: [
@@ -31,7 +31,7 @@ class _FlexdemoState extends State<Flexdemo> {
               Expanded(
                 child: Container(
                   color: Colors.orange,
-                  height: 50,
+                  height: 20,
                 ),
               )
             ],

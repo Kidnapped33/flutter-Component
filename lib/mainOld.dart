@@ -17,7 +17,7 @@ import 'package:flutter_test1/Widget/constraints.dart';
 import 'package:flutter_test1/Widget/rowColumn.dart';
 import 'package:flutter_test1/Widget/TransformTest.dart';
 import 'package:flutter_test1/02_layout/layout.dart';
-import 'package:flutter_test1/02_layout/ColumnTest.dart';
+import 'package:flutter_test1/01_mainDemo/ColumnTest.dart';
 import 'package:flutter_test1/02_layout/FlexDemo.dart';
 
 void main() => runApp(const MyApp());

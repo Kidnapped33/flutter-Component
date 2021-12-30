@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 
-class Columntest extends StatefulWidget {
-  const Columntest({Key? key}) : super(key: key);
+class RowTest extends StatefulWidget {
+  const RowTest({Key? key}) : super(key: key);
 
   @override
-  _ColumntestState createState() => _ColumntestState();
+  _RowTestState createState() => _RowTestState();
 }
 
-class _ColumntestState extends State<Columntest> {
+class _RowTestState extends State<RowTest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Column 页面")),
+        appBar: AppBar(title: const Text("Row 页")),
         body: Container(
-            width: 300,
+            width: double.infinity,
+            height: 300,
             color: Colors.orange,
-            child: Column(
+            child: Row(
               //主轴的对齐方式
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               //横轴的对齐方式
